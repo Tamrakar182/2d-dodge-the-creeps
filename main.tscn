@@ -29,8 +29,8 @@ color = Color( 0.2204, 0.37202, 0.38, 1 )
 curve = SubResource( 1 )
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
-position = Vector2( -2, 0 )
-rotation = -1.57496
+position = Vector2( -1.99999, 0.00171012 )
+rotation = -1.57484
 offset = 2396.88
 
 [node name="MobTimer" type="Timer" parent="."]

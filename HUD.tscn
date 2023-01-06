@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/xolonium-regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://HUD.gd" type="Script" id=2]
@@ -6,6 +6,12 @@
 [sub_resource type="DynamicFont" id=1]
 size = 51
 font_data = ExtResource( 1 )
+
+[sub_resource type="InputEventAction" id=2]
+action = "start_game"
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -34,7 +40,7 @@ text = "Dodge the creeps"
 align = 1
 autowrap = true
 
-[node name="Button" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.498
 anchor_right = 0.5
@@ -45,11 +51,12 @@ margin_right = 73.0
 margin_bottom = 115.44
 rect_scale = Vector2( 1.07086, 1.12727 )
 custom_fonts/font = SubResource( 1 )
+shortcut = SubResource( 3 )
 text = "Start"
 
 [node name="MessageTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]

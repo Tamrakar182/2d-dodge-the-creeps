@@ -21,7 +21,7 @@ func show_gameOver():
 
 
 func _on_Button_pressed():
-	$Button.hide()
+	$StartButton.hide()
 	emit_signal("start_game")
 
 func _on_MessageTimer_timeout():

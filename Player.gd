@@ -60,7 +60,7 @@ func start(new_position):
 	show()
 	$CollisionShape2D.disabled = false
 
-func _on_Player_body_entered(body):
+func _on_Player_body_entered(_body):
 	hide()
 	$CollisionShape2D.set_deferred("disabled", true)
 	emit_signal("hit")
